@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12 user border-bot">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-3">Username</div>
+    <div class="col-xs-3">Email</div>
+    <div class="col-xs-3 no-border">Address</div>
+  </div>
+  <div class="col-xs-12 border-bot" ng-class="{'no-border': $last}" ng-repeat="user in ngModel | orderBy:'-name'">
+    <user ng-model="user"></user>
+  </div>
+</div>
+

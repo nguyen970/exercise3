@@ -1,0 +1,58 @@
+To run this program do the following:
+
+1) npm install
+2) grunt dev
+
+This project is set up by modules. Each module will have it's own folder and within its folder, it will have 6 other
+folders.
+
+1) Config Folder holds the routing info for the module
+2) Controller folder holds the controllers
+3) Directive folder holds all of the directives
+4) Service folder holds the services
+5) Test folder holds all fo the tests
+6) Views folder holds all of the HTML templates
+
+In exercise 3, I was asked to display the address of each user--specifically, I was asked to display the state for each
+user. In order to do so, I used Google Map's API to get the state of each location by the zipcode. My original approach
+was to use the geo location (latitude and longitude) in order to find the state; however I soon found out that the
+lng and lat given were mock data. I still left the method in the service for your viewing pleasure.
+
+Unfortunately, I spent a good 3 days trying to figure out how to set the E2E testing for my project. I was super close,
+but given the amount of time I have spent, I figured I would submit what I have and ask for your help on where I went
+wrong.
+
+The application WILL run karma with mocha if you type grunt test. However, there are no test cases as I kept getting
+reference errors for "module."
+
+If I was able to properly set up the testing, this is what I would have tested:
+
+UserService:
+  1) this.getAllUsers()
+    * I would have tested to see if http request would have returned in a timely manner
+    * I would have tested the length of the returned data to make sure we were able to retrieve all of the users
+
+  2) this.getUserById()
+    * I would have tested to see if http request would have returned in a timely manner
+    * I would have passed it a valid id and make sure the return data was equal to the expected data
+    * I would have passed it an invalid id to make sure it threw an error
+
+  3) this.getUserAddressByGeo()
+    * I would have tested to see if http request would have returned in a timely manner
+    * I would have passed it valid lat and lng coordinates and make sure the return data was equal to the expected data
+    * I would have passed it invalid lat and lng coordinates to make sure it threw an error
+
+  4) this.getUserAddressByZip()
+    * I would have tested to see if http request would have returned in a timely manner
+    * I would have passed it a valid zipcode and make sure the return data was equal to the expected data
+    * I would have passed it an invalid zipcode to make sure it threw an error
+
+  5) this.getStateFromAddress()
+    * I would have tested to see if http request would have returned in a timely manner
+    * I would have passed it a valid address and make sure the return data was equal to the expected data
+    * I would have passed it an invalid address to make sure it returned an empty string
+
+Page Loading Testing:
+  1) I would have made sure that if the route is '/', it would load the userlist page
+  2) I would have test to make sure when the route is '/userlist', it would load the userlist page
+  3) I would have test to make sure when the route is '/userDetail', it would load the userdetail page

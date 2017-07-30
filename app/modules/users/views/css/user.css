@@ -1,0 +1,28 @@
+.user{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.user .col-xs-3{
+  padding: 10px;
+  border-right: 1px solid #000;
+  word-wrap: break-word;
+}
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.fa-user{
+  font-size:150px !important;
+  color: #2c3466;
+}
+.fa-times-circle{
+  margin-right: 20px;
+  float: right;
+  font-size: 25px !important;
+  color: #2c3466;
+}
+.fa-times-circle:hover{
+  color: #345791;
+}

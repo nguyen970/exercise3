@@ -1,0 +1,22 @@
+/* app css stylesheet */
+.pad-bot-10px{
+  padding-bottom: 10px;
+}
+.pad-10px{
+  padding: 10px;
+}
+.margin-top-20px{
+  margin-top: 20px;
+}
+.border-bot{
+  border-bottom: 1px solid #000;
+}
+.border-right{
+  border-right: 1px solid #000;
+}
+.no-border{
+  border: none !important;
+}
+.black-border{
+  border: 1px solid #000;
+}
